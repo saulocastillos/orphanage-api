@@ -1,4 +1,4 @@
-import { Request, response, Response } from "express";
+import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import OrphanageView from "../views/orphanages_view";
 
@@ -31,7 +31,7 @@ export default {
     console.log("create -> req.files", req.files);
 
     const {
-      name,
+      nome,
       latitude,
       longitude,
       about,
@@ -51,7 +51,7 @@ export default {
     });
 
     const orphanage = orphanagesRepository.create({
-      name,
+      nome,
       latitude,
       longitude,
       about,
